@@ -61,30 +61,4 @@ class LoginPage extends GetViewCP<LoginController, LoginPresenter> {
       ),
     );
   }
-
-  // final snackBar = const SnackBar(
-  //   content: Text("E-mail ou Senha são inválidos", textAlign: TextAlign.center),
-  //   backgroundColor: Colors.redAccent,
-  // );
 }
-
-
-                    // FocusScopeNode currentFocus = FocusScope.of(context);
-                    // if (controller.formKey.currentState!.validate()) {
-                    //   bool deuCerto = await presenter.login();
-                    //   if (!currentFocus.hasPrimaryFocus) {
-                    //     currentFocus.unfocus();
-                    //   }
-                    //   if (deuCerto) {
-                    //     // Navigator.pushReplacement(
-                    //     //   context,
-                    //     //   MaterialPageRoute(
-                    //     //     builder: (context) => const HomePage(),
-                    //     //   ),
-                    //     //);
-                    //     Get.toNamed("/home");
-                    //   } else {
-                    //     controller.passowrd.clear();
-                    //     ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                    //   }
-                    // }
