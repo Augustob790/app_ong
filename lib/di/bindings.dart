@@ -11,5 +11,11 @@ class AppBindings extends Bindings {
 
     Get.lazyPut<HomeController>(() => HomeControl(), fenix: true);
     Get.lazyPut<HomePresenter>(() => HomePresentation(), fenix: true);
+
+    Get.lazyPut<CatController>(() => CatControl(), fenix: true);
+    Get.lazyPut<CatPresenter>(() => CatPresentation(), fenix: true);
+
+    Get.lazyPut<DogController>(() => DogControl(), fenix: true);
+    Get.lazyPut<DogPresenter>(() => DogPresentation(), fenix: true);
   }
 }

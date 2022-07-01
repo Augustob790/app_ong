@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:app_ong/ui/styles/app_images.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,11 +18,11 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     verificarToken().then((value) {
       if (value) {
         Timer(const Duration(seconds: 5), () {
-          Get.toNamed("/home");
+          Get.offAllNamed("/home");
         });
       } else {
         Timer(const Duration(seconds: 5), () {
-          Get.toNamed("/login");
+          Get.offAllNamed("/login");
         });
       }
     });
@@ -30,13 +31,21 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
-      body: Container(
-        padding: const EdgeInsets.all(48),
-        color: Colors.amber,
-        child: const Center(
-          child: Text('Splash Screen'),
-        ),
+      backgroundColor: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 15, right: 15),
+            child: Center(
+              child: Image.asset(
+                AppImages.logo,
+                width: 350,
+                height: 350,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

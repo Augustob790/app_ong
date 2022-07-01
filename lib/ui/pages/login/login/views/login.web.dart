@@ -1,6 +1,8 @@
 import 'package:app_ong/ui/components/helpers/getviewcp.dart';
 import 'package:app_ong/ui/pages/login/login.controller.dart';
 import 'package:app_ong/ui/pages/login/login.presenter.dart';
+import 'package:app_ong/ui/styles/app_colors.dart';
+import 'package:app_ong/ui/styles/app_images.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends GetViewCP<LoginController, LoginPresenter> {
@@ -9,7 +11,6 @@ class LoginPage extends GetViewCP<LoginController, LoginPresenter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
       body: Form(
         key: controller.formKey,
         child: Center(
@@ -18,6 +19,16 @@ class LoginPage extends GetViewCP<LoginController, LoginPresenter> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15, right: 15),
+                  child: Center(
+                    child: Image.asset(
+                      AppImages.logo,
+                      width: 150,
+                      height: 150,
+                    ),
+                  ),
+                ),
                 TextFormField(
                   decoration: const InputDecoration(labelText: 'E-mail'),
                   controller: controller.email,

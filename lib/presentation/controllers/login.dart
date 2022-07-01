@@ -18,6 +18,6 @@ class LoginControl implements LoginController {
   void login() async {
     if (!(formKey.currentState?.validate() ?? false) ||
         !await _presenter.login(email.text, passowrd.text)) return;
-    Get.offAndToNamed("/home");
+    Get.offNamed("/home");
   }
 }
