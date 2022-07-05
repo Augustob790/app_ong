@@ -1,7 +1,6 @@
 import 'package:app_ong/ui/components/helpers/getviewcp.dart';
 import 'package:app_ong/ui/pages/login/login.controller.dart';
 import 'package:app_ong/ui/pages/login/login.presenter.dart';
-import 'package:app_ong/ui/styles/app_colors.dart';
 import 'package:app_ong/ui/styles/app_images.dart';
 import 'package:flutter/material.dart';
 
