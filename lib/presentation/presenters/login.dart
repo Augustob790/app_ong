@@ -1,29 +1,21 @@
 import 'dart:convert';
-import 'package:app_ong/data/constants/apiroutes.dart';
+
+import 'package:app_ong/data/constants/constants.dart';
+import 'package:app_ong/data/models/models.dart';
 import 'package:app_ong/ui/pages/pages.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
 class LoginPresentation extends GetxController implements LoginPresenter {
   @override
-  Future<bool> login(String email, String senha) async {
-    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    var url = Uri.parse(ApiRoutes.login);
-    var resposta = await http.post(
-      url,
-      body: {
-        'email': email,
-        'password': senha,
-      },
-    );
-    if (resposta.statusCode == 200) {
-      await sharedPreferences.setString(
-          'token', "Token ${jsonDecode(resposta.body)['token']}");
-      return true;
-    } else {
-      jsonDecode(resposta.body);
-      return false;
+  Future<List<LoginModel>> loginJson() async {
+    var url = Uri.parse(ApiRoutes.jsonLogin);
+    var response = await http.get(url);
+    final list = jsonDecode(response.body)['data'] as List<dynamic>;
+
+    if (response.statusCode == 200) {
+      return list.map((e) => LoginModel.fromJson(e)).toList();
     }
+    return [];
   }
 }

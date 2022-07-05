@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:app_ong/presentation/presenters/presenters.dart';
 import 'package:app_ong/ui/styles/app_images.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,8 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   @override
   void initState() {
     super.initState();
-    verificarToken().then((value) {
+
+    verificaEmail().then((value) {
       if (value) {
         Timer(const Duration(seconds: 5), () {
           Get.offAllNamed("/home");
@@ -50,12 +52,19 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     );
   }
 
-  Future<bool> verificarToken() async {
+  Future<bool> verificaEmail() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    if (sharedPreferences.getString('token') == null) {
-      return false;
-    } else {
-      return true;
+    final email = sharedPreferences.getString('email');
+    if (email != null) {
+      LoginPresentation _presenterLogin = LoginPresentation();
+      final list = await _presenterLogin.loginJson();
+
+      for (var element in list) {
+        if (element.email == email) {
+          return true;
+        }
+      }
     }
+    return false;
   }
 }

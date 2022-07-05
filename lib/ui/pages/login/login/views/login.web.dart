@@ -43,20 +43,6 @@ class LoginPage extends GetViewCP<LoginController, LoginPresenter> {
                     return null;
                   },
                 ),
-                TextFormField(
-                  decoration: const InputDecoration(labelText: 'Senha'),
-                  obscureText: true,
-                  controller: controller.passowrd,
-                  keyboardType: TextInputType.text,
-                  validator: (senha) {
-                    if (senha == null || senha.isEmpty) {
-                      return "Por favor, digite sua senha";
-                    } else if (senha.length < 6) {
-                      return "Por favor uma senha maior que 6 caracteres";
-                    }
-                    return null;
-                  },
-                ),
                 const SizedBox(height: 25),
                 ElevatedButton(
                   onPressed: () {

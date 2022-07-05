@@ -1,3 +1,5 @@
+import 'package:app_ong/data/models/models.dart';
+
 abstract class LoginPresenter {
-  Future<bool> login(String email, String senha);
+  Future<List<LoginModel>> loginJson();
 }
