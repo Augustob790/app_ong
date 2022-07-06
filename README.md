@@ -8,7 +8,9 @@ Acesse o link: https://drive.google.com/file/d/1bbutOO5M0fnZAYe9yW0p9NF-eASvzN7K
 
 ou
 
-Execute o comando git clone com o link: https://github.com/Augustob790/app_ong.git em seu terminl para clonar esse repositorio.
+1. Tenha o Flutter instalado em sua máquina
+2. Execute o comando git clone com o link: https://github.com/Augustob790/app_ong.git em seu terminal para clonar esse repositório.
+3. Execute o projeto em seu editor de texto ou ide de sua preferencia.
 
 
 
