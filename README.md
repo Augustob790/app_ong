@@ -4,9 +4,11 @@ Aplicativo desenvolvido destinado a uma ONG especializada na adoção de cães e
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Acesse o link: https://drive.google.com/file/d/1bbutOO5M0fnZAYe9yW0p9NF-eASvzN7K/view?usp=sharing e baixe a App do projeto
 
-A few resources to get you started if this is your first Flutter project:
+ou
+
+Tenha o Flutter Instalado na sua máquina e execute o projeto!!
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
