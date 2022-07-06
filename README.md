@@ -4,7 +4,7 @@ Aplicativo desenvolvido destinado a uma ONG especializada na adoção de cães e
 
 ## Getting Started
 
-Acesse o link: https://drive.google.com/file/d/16W4_0jWiQHDEo-f2AzGcfIQygLPZ47Z5/view?usp=sharing e baixe a apk do projeto
+Acesse o link: https://drive.google.com/file/d/16W4_0jWiQHDEo-f2AzGcfIQygLPZ47Z5/view?usp=sharing e baixe a apk do projeto e instale em seu dispotivo Android
 
 ou
 
