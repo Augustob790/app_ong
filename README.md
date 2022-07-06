@@ -1,6 +1,6 @@
-# app_ong
+# ONG
 
-A new Flutter project.
+Aplicativo desenvolvido destinado a uma ONG especializada na adoção de cães e gatos.
 
 ## Getting Started
 
